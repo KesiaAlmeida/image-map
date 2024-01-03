@@ -14,11 +14,11 @@ document.addEventListener('click', e => {
 
         ocultaElementosDetalhes();
 
-        document.getElementById(e.target.getAttribute('data-target')).classList.remove('oculto');
+        document.querySelector('#overlay').classList.remove('oculto');
 
         document.querySelector(`img[data-target="${e.target.getAttribute('data-target')}"`).classList.remove('oculto');
-
-        document.querySelector('#overlay').classList.remove('oculto');
+        
+        document.getElementById(e.target.getAttribute('data-target')).classList.remove('oculto');
 
     // caso contrário, ao clicar no X da div fecha o conteúdo
     } else if (e.target.classList.contains('close')) {

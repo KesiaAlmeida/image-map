@@ -11,6 +11,8 @@
 document.addEventListener('click', e => {
 
     if (e.target.localName === 'area') {
+        
+        document.querySelector('#overlay').classList.remove('oculto');
 
         ocultaElementosDetalhes();
 
@@ -18,7 +20,6 @@ document.addEventListener('click', e => {
 
         document.querySelector(`img[data-target="${e.target.getAttribute('data-target')}"`).classList.remove('oculto');
 
-        document.querySelector('#overlay').classList.remove('oculto');
 
     // caso contrário, ao clicar no X da div fecha o conteúdo
     } else if (e.target.classList.contains('close')) {
